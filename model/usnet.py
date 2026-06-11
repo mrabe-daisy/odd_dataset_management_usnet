@@ -79,10 +79,10 @@ class MEC(nn.Module):
 
 
 class USNet(nn.Module):
-    def __init__(self, num_classes, backbone_name):
+    def __init__(self, num_classes, backbone_name, use_pretrained_model):
         super().__init__()
         # build backbone
-        self.backbone = symmetric_backbone(name=backbone_name)
+        self.backbone = symmetric_backbone(name=backbone_name, pretrained=use_pretrained_model)
 
         if backbone_name == 'resnet101':
             # ASPP

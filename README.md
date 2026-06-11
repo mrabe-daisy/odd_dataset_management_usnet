@@ -1,3 +1,19 @@
+> NOTE: This is a fork of the USNet repository. The upstream repository can be
+> found [here](https://github.com/morancyc/USNet.git).
+
+The implementation is extended as follows:
+
+* While the original has parameters, they are discarded if given via command
+  line. I changed that and parameters given via command line are now honored.
+* The test schript `test.py` was not fully implemented for the Cityscape
+  dataset. I extended its functionality to support testing the model against the
+  Cityscape dataset.
+* The train script `train.py` saved the model and training logs into different
+  folders. Same for the inference output of the test script `test.py`. The
+  outputs are now by default all saved into the same folder. This folders name
+  is as follows:
+  `{backbone_name}___{learning_rate}___{batch_size}___{num_epochs}___{date}`.
+
 # USNet
 
 

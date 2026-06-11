@@ -3,7 +3,7 @@ from torchvision import models
 
 
 class symmetric_backbone(torch.nn.Module):
-    def __init__(self, name, pretrained=True):
+    def __init__(self, name, pretrained):
         super().__init__()
         if name == 'resnet18':
             features = models.resnet18(pretrained=pretrained)
