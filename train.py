@@ -173,7 +173,7 @@ def main():
     parser.add_argument(
         '--patience',
         type=int,
-        default=20,
+        default=500,
         help='patience for early stopping'
     )
     parser.add_argument(
@@ -276,7 +276,7 @@ def main():
         '--non_pretrained',
         dest='non_pretrained',
         action='store_true',
-        help='no not load a pretrained model'
+        help='do not load a pretrained model'
     )
     # args = parser.parse_args(params)
     args = parser.parse_args()
